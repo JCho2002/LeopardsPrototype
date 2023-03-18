@@ -267,8 +267,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad4ca723b79e17439b7c6e786449508, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _inputImagePaths: []
-  _exportedPDFPath: ExportPDFTest.pdf
+  _inputImagePaths:
+  - Exports/TestImage_01.png
+  - Exports/TestImage_02.png
+  - Exports/TestImage_03.png
+  _exportedPdfPath: Exports/TestPdfExport.pdf
 --- !u!4 &1416671089
 Transform:
   m_ObjectHideFlags: 0
