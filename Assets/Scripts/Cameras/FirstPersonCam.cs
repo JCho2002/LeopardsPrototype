@@ -18,7 +18,7 @@ public class FirstPersonCam : MonoBehaviour
     void Update()
     {
         _yRotation += Input.GetAxis("Horizontal")* _rotationSpeed*Time.deltaTime;
-        _xRotation += Input.GetAxis("Vertical") * _rotationSpeed * Time.deltaTime;
+        _xRotation += -Input.GetAxis("Vertical") * _rotationSpeed * Time.deltaTime;
 
         _xRotation = Mathf.Clamp(_xRotation, -_yLimit, _yLimit);
 
@@ -28,7 +28,7 @@ public class FirstPersonCam : MonoBehaviour
             _yRotation = 359f;
 
         Debug.Log((_xRotation, " - ", _yRotation));
-        transform.rotation = Quaternion.Euler(_xRotation, _yRotation, 0f);
+        transform.localRotation = Quaternion.Euler(_xRotation, _yRotation, 0f);
 
         
     }

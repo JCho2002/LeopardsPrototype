@@ -13,12 +13,12 @@ public class MainCamera : MonoBehaviour
 
 
     private float _timer = 0;
-    private int _position;
-    //private float _ratio;
+    private int _position=1;
     private bool _isLerping = false;
     private Vector3 _destinationPosition;
     private Quaternion _destinationRotation;
-    private bool _pressed = false;
+    //private bool _pressed = false;
+
 
     private void Start()
     {
@@ -29,8 +29,10 @@ public class MainCamera : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && !_pressed) //change input to change the 
-            SwitchCamera();
+        //if (Input.GetKeyDown(KeyCode.E) && !_pressed)
+        if (Input.GetKeyDown(KeyCode.E)) 
+
+                SwitchCamera();
 
         if (_timer > 0)
             Timer();
