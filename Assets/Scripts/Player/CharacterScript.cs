@@ -13,12 +13,15 @@ public class CharacterScript : MonoBehaviour
     [SerializeField]
     private float _jumpHeight = 2.0f;
 
+    [SerializeField]
+    private bool _stopOnEPress = true;
+
     private bool _canWalk = true;
     private float _rotation = 0;
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && _stopOnEPress )
             _canWalk = !_canWalk;
 
 
