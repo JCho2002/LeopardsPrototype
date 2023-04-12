@@ -10,6 +10,12 @@ public class GameController : MonoBehaviour
     private float _startTime;
 
     [SerializeField]
+    private float _penaltyTime;
+
+    [SerializeField]
+    private float _rewardTime;
+
+    [SerializeField]
     private TextMeshProUGUI _timeUI;
 
     [SerializeField]
@@ -47,12 +53,12 @@ public class GameController : MonoBehaviour
 
     private void WrongAnimalChosen()
     {
-        throw new NotImplementedException();
+        _timer -= _penaltyTime;
     }
 
     private void RightAnimalChosen()
     {
-        throw new NotImplementedException();
+        _timer += _rewardTime;
     }
 
     private void NewAnimal()
