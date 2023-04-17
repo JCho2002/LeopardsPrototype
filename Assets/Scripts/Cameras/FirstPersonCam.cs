@@ -27,7 +27,6 @@ public class FirstPersonCam : MonoBehaviour
         if (_yRotation < 0f)
             _yRotation = 359f;
 
-        Debug.Log((_xRotation, " - ", _yRotation));
         transform.localRotation = Quaternion.Euler(_xRotation, _yRotation, 0f);
 
         

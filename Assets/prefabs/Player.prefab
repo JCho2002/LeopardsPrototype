@@ -51,6 +51,9 @@ MonoBehaviour:
   _char: {fileID: 2850788118267020080}
   _speed: 10
   _rotationSpeed: 60
+  _jumpHeight: 2
+  _stopOnEPress: 1
+  _gravityMultiplier: 0
 --- !u!143 &2850788118267020080
 CharacterController:
   m_ObjectHideFlags: 0
